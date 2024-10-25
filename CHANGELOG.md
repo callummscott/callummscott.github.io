@@ -1,3 +1,3 @@
 # Changes
 
-- Added more supporting property definitions of `background-size` for other devices to try to fix the stretched image bug.
+- Changed `background-position: fixed` and `position: relative` to just `position: fixed`; hoping this fixes the stretched background bug.

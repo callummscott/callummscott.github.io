@@ -46,11 +46,10 @@ body {
     width: 100%;
 }
 .bg-image {
-    position: relative;
+    position: fixed;
     background-image: url("./images/kitchen-landscape-edited-lq.jpg");
     background-repeat: no-repeat;
     background-position: 50% 10%;
-    background-attachment: fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
