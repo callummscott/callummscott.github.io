@@ -1,4 +1,3 @@
 # Changes
 
-- Added `svh` form of `height` definition for `title-page-container` to try to fix the border being hidden on iOS Chrome -- this isn't yet an issue on iOS FireFox Focus.
-- Also added `dvh` definitions to `background-image` to try to fix the unilateral weirdness on iOS
+- Added more supporting property definitions of `background-size` for other devices to try to fix the stretched image bug.
