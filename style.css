@@ -15,7 +15,7 @@ body {
     min-width: 340px;
     font-family: sans-serif;
     font-weight: 300;
-    background-color: black;
+    background-color: #B2A48A;
 } body::-webkit-scrollbar {
     display: none;
 }
