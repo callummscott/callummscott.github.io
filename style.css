@@ -261,14 +261,12 @@ body {
         width: 500px;
         min-width: calc(.8*425px);
         padding-block: 10vw;
-
-
     }
     .chopping-board {
         padding-inline: 10px;
     }
     .heading {
-        text-wrap: pretty;
+        text-wrap: wrap;
     }
     .bg-image {
         background-image: url("images/kitchen-portrait.jpg");
