@@ -10,7 +10,7 @@ a:link {
 }
 
 body {
-    height: 100vh;
+    height: min-content;
     margin: 0;
     min-width: 340px;
     font-family: sans-serif;
@@ -27,12 +27,6 @@ body {
     font-style: normal;
     color: var(--primary-text-color);
 }
-.cbyg {
-    font-family: "Covered by your Grace", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--primary-text-color);
-}
 
 .page {
     display: flex;
@@ -44,38 +38,41 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    height: 98vh;
+    /* position: relative; */
 }
 
-.bg-image {
-    position: absolute;
-    background-image: url("./images/kitchen-landscape.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.bg-image-wrapper {
+    height: 0px;
     width: 100%;
-    height: 100%;
+}
+.bg-image {
+    position: relative;
+    background-image: url("./images/kitchen-landscape-edited-lq.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
+    -webkit-filter: blur(.25rem);
+    -moz-filter: blur(.25rem);
+    -o-filter: blur(.25rem);
+    -ms-filter: blur(.25rem);
+    filter: blur(.25rem);
 }
 
 .title-page-contents {
     width: 800px;
-    height: 100%;
+    height: 97vh;
 
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     gap: 30px;
 
-    padding-block: 400px;
 }
 
 .chopping-board {
@@ -261,21 +258,18 @@ body {
 /* Tablet */
 @media only screen and (max-width: 768px) {
     .title-page-container {
-        height: 60vh;
+        /* height: 60vh; */
     }
     .title-page-contents {
-        width: 500px;
+        /* width: 500px; */
         min-width: calc(.8*425px);
-        padding-block: 10vw;
+        /* padding-block: 10vw; */
     }
     .chopping-board {
         padding-inline: 10px;
     }
-    .heading {
-        text-wrap: wrap;
-    }
     .bg-image {
-        background-image: url("images/kitchen-portrait.jpg");
+        background-image: url("images/kitchen-portrait-edited-lq.jpg");
     }
 }
 
@@ -287,7 +281,8 @@ body {
     .chopping-board {
         border-radius: 0;
     }
-    #title-svg-wrapper {
+    #title-border-svg-wrapper {
+        /* Scales border-svg size in y direction + updates shift*/
         top: -48px;
         height: 50px;
         /*TODO transition: height 2s; */ 
@@ -311,7 +306,15 @@ body {
         align-items: center;
     } .searchbar input[type=submit] {
         width: 50%;
-    }
+    } 
+    
+}
+/* Incredibly awkward title-border shrinker for small landscape phones */
+@media only screen and (orientation: landscape) and (max-height: 425px) {
+    #title-border-svg-wrapper {
+        /* Scales border-svg size in y direction + updates shift*/
+        top: -38px;
+        height: 40px;
 }
 
 /* Mobile S */
