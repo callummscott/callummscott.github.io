@@ -1,3 +1,3 @@
 # Changes
 
-- Changed `background-position: fixed` and `position: relative` to just `position: fixed`; hoping this fixes the stretched background bug.
+- Changing `background-position` away from percentages to `center` as a test

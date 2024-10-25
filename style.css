@@ -49,7 +49,7 @@ body {
     position: fixed;
     background-image: url("./images/kitchen-landscape-edited-lq.jpg");
     background-repeat: no-repeat;
-    background-position: 50% 10%;
+    background-position: center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
