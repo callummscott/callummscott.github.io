@@ -41,9 +41,11 @@ body {
 .title-page-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     /* position: relative; */
+    height: 97vh;
+    height: 97svh;
 }
 
 .bg-image-wrapper {
@@ -290,12 +292,6 @@ body {
     .chopping-board {
         border-radius: 0;
     }
-    #title-border-svg-wrapper {
-        /* Scales border-svg size in y direction + updates shift*/
-        top: -48px;
-        height: 50px;
-        
-    }
 }
 
 /* Mobile L */
@@ -330,17 +326,20 @@ body {
 /* Landscape Mobile L */
 @media only screen and (orientation: landscape) and (max-height: 425px) {
     #title-border-svg-wrapper {
-        /* Scales border-svg size in y direction + updates shift*/
-        top: calc(2px + -1*clamp(5px, calc( 81.3svh/2.25 - 81.3px*8/9 + 5px), 86.3px));
-        height: clamp(5px, calc(81.3svh/2.25 - 81.3px*8/9 + 5px), 86.3px);
+        /* Scales border-svg size in y direction using linear calculation between 100svh:200px=5px & 100svh:425px=86.3px */
+        /* top: calc(2px + -1*clamp(5px, calc( 81.3svh/2.25 - 81.3px*8/9 + 5px), 86.3px));
+        height: clamp(5px, calc(81.3svh/2.25 - 81.3px*8/9 + 5px), 86.3px); */
+        height: 10svh;
+        top: calc(-10svh + 2px);
+    }.title-page-container {
+        height: 97svh;
     }
     .title-page-contents {
-        justify-content: start;
+        height: 87svh;
         width: 500px;
         gap: 15px;
     }
     .chopping-board {
-        margin-top: clamp(5px, 20svh, 160px);
         padding: 10px;
     }
     .sub-heading {
@@ -356,7 +355,6 @@ body {
         gap: 10px;
     }
     .chopping-board {
-        margin-top: clamp(5px, 10svh, 160px);
         padding: 5px;
     }
 }
