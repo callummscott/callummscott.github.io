@@ -3,6 +3,10 @@ html {
     --secondary-text-color: rgb(255, 245, 225);
     --contrast-text-color: rgb(224, 127, 0);
     --primary-shadow-color: rgba(150, 140, 120, 1);
+
+    --input-color-default: rgba(0, 0, 0, .15);
+    --input-color-active: rgba(50, 50, 50, 0.2);
+    --input-color-hover: rgba(0, 0, 0, .3);
 }
 
 a:link {
@@ -10,6 +14,7 @@ a:link {
 }
 
 body {
+    overflow-x:scroll;
     height: min-content;
     margin: 0;
     min-width: 340px;
@@ -69,7 +74,7 @@ body {
 }
 
 .title-page-contents {
-    width: 800px;
+    width: min(100vw, 800px);
     height: 97vh;
     height: 97svh;
 
@@ -79,6 +84,7 @@ body {
     align-items: center;
     gap: 30px;
 
+    transition: gap .5s, width .5s;
 }
 
 .chopping-board {
@@ -98,11 +104,13 @@ body {
     padding: 30px;
 
     z-index: 2;
+    transition: padding .5s;
 }
 
 .sub-heading {
     color: rgba(255, 235, 200, 0.8);
     font-size: 3rem;
+    transition: font-size .5s;
 }
 .heading {
     color: var(--primary-text-color);
@@ -111,6 +119,7 @@ body {
     text-wrap: wrap;
 
     width: 100%;
+    transition: font-size .5s;
 }
 
 .searchbar {
@@ -118,7 +127,7 @@ body {
     justify-content: center;
     z-index: 0;
     flex-basis: 50px;
-    gap: 10px
+    gap: 10px;
 } .searchbar input {
     padding-inline: 20px;
     font-size: large;
@@ -129,27 +138,25 @@ body {
 }
 
 #recipe-search {
-    background-color: transparent;
+    background-color: var(--input-color-default);
     outline: 1px solid var(--primary-text-color);
     border: none;
-    z-index: 0;
 } #recipe-search:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--input-color-hover);
     box-shadow: 0 2px 5px inset rgba(0, 0, 0, 1);
-    z-index: inherit;
     transition: background-color .2s, box-shadow .2s;
 } #recipe-search:active {
-    background-color: rgba(255, 255, 255, 0.315);
+    background-color: var(--input-color-active);
 }
 
 .btn-submit {
-    background-color: transparent;
+    background-color: var(--input-color-default);
     outline: 1px solid var(--primary-text-color);
     color: var(--primary-text-color);
     border: none;
 } .btn-submit:hover {
+    background-color: var(--input-color-hover);
     box-shadow: 0 2px 5px inset rgba(0, 0, 0, 1);
-    background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
     transition: background-color .2s, box-shadow .2s;
 }
@@ -164,6 +171,7 @@ body {
     position: relative;
     top: -84.3px;
     height: 86.3px; /** just the height of the path */
+    transition: height .5s, top .5s;
 }
 
 
@@ -187,15 +195,17 @@ body {
     width: 80%;
     height: min-content;
 }
-.recipe-link:hover > .recipe-card {
+
+.recipe-link {
+    transition: translate .3s, box-shadow .3s;
+}
+.recipe-link:hover .recipe-card {
     box-shadow: none;
     position: relative;
     translate: 0 5px;
-    transition: translate .3s, box-shadow .3s;
-    
 }
-.recipe-link:hover > .recipe-card > .recipe-title {
-    text-shadow: 0px 0px 1px black      ;
+.recipe-link:hover .recipe-title {
+    text-shadow: 0px 0px 1px black;
     text-decoration: underline;
 }
 
@@ -246,16 +256,14 @@ body {
 
 /* Laptop */
 @media only screen and (max-width: 1024px) {
-    .title-page-container {
-        transition: height 1s;
-    }
     .title-page-contents {
-        width: 600px;
+        width: min(100vw, 600px);
     }
     .sub-heading {
         font-size: 2rem;
     }
     .heading {
+        text-wrap: wrap;
         font-size: 3rem;
     }
 }
@@ -263,13 +271,8 @@ body {
 
 /* Tablet */
 @media only screen and (max-width: 768px) {
-    .title-page-container {
-        /* height: 60vh; */
-    }
     .title-page-contents {
-        /* width: 500px; */
         min-width: calc(.8*425px);
-        /* padding-block: 10vw; */
     }
     .chopping-board {
         padding-inline: 10px;
@@ -291,7 +294,7 @@ body {
         /* Scales border-svg size in y direction + updates shift*/
         top: -48px;
         height: 50px;
-        /*TODO transition: height 2s; */ 
+        
     }
 }
 
@@ -315,14 +318,7 @@ body {
     } 
     
 }
-/* Incredibly awkward title-border shrinker for small landscape phones */
-@media only screen and (orientation: landscape) and (max-height: 425px) {
-    #title-border-svg-wrapper {
-        /* Scales border-svg size in y direction + updates shift*/
-        top: -38px;
-        height: 40px;
-}
-}
+
 
 /* Mobile S */
 @media only screen and (max-width: 320px) {
@@ -330,5 +326,37 @@ body {
 }
 
 
+/* Incredibly awkward title-border shrinker for annoyingly-narrow landscape phones */
+/* Landscape Mobile L */
+@media only screen and (orientation: landscape) and (max-height: 425px) {
+    #title-border-svg-wrapper {
+        /* Scales border-svg size in y direction + updates shift*/
+        top: calc(2px + -1*clamp(5px, calc( 81.3vh/2.25 - 81.3px*8/9 + 5px), 86.3px));
+        height: clamp(5px, calc(81.3vh/2.25 - 81.3px*8/9 + 5px), 86.3px);
+    }
+    .title-page-contents {
+        justify-content: start;
+        width: 500px;
+        gap: 15px;
+    }
+    .chopping-board {
+        margin-top: clamp(5px, 20vh, 160px);
+        padding: 10px;
+    }
+    .sub-heading {
+        font-size: 2rem;
+    }
+    .heading {
+        font-size: 3rem;
+    }
 
-
+}
+@media only screen and (orientation: landscape) and (max-height: 320px) {
+    .title-page-contents {
+        gap: 10px;
+    }
+    .chopping-board {
+        margin-top: clamp(5px, 10vh, 160px);
+        padding: 5px;
+    }
+}
