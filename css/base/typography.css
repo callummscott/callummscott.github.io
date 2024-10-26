@@ -1,0 +1,21 @@
+
+
+h1,h2,h3 {
+    margin-block: 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+.ftg {
+    font-family: "Fredericka the Great", sans;
+    font-weight: 400;
+}
+.cbyg {
+    font-family: "Covered by your Grace", cursive; 
+    font-weight: 400;
+}

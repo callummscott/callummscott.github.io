@@ -1,0 +1,17 @@
+html {
+    --primary-text-color: rgb(255, 235, 200);
+    --secondary-text-color: rgb(255, 245, 225);
+    --contrast-text-color: rgb(224, 127, 0);
+    --primary-shadow-color: rgba(150, 140, 120, 1);
+
+    --input-color-default: rgba(0, 0, 0, .15);
+    --input-color-active: rgba(50, 50, 50, 0.2);
+    --input-color-hover: rgba(0, 0, 0, .3);
+
+    --padding-sm: 2px;
+    --padding-md: 5px;
+    --padding-lg: 10px;
+    --padding-xl: 15px;
+
+
+}

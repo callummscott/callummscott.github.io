@@ -1,0 +1,46 @@
+.hero {
+    width: 100vw;
+    width: 100lvw;
+    height: 500px;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/error.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backboard {
+    padding: var(--padding-md);
+}
+
+.hero .backboard {
+    width: 50%;
+    background-image: url("../../images/error.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.backboard > * {
+    text-align: start;
+}
+
+
+.fullscreen {
+    height: 100vh;
+    height: 100svh;
+}
+.overlap {
+    height: 97vh;
+    height: 97svh;
+}
