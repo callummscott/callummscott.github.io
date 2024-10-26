@@ -1,9 +1,6 @@
 # Changes
 
-- Much improved the responsiveness for landscape view on mobile
-    - Managed to add a linearly changing height of `title-border-svg` to make more room for the chopping board for slimmer views.
-- Changed title-input colours: darkened when hovering feels more appropriate
-
-
-# Bug-watch
-- Widths < 340px seem to weirdly shrink the background image on Mobile, but not on Desktop; maybe worth looking into
+- I think the pesky bug has been fixed now, we'll see
+- Removed multiple pointless references to 95% width chopping-board
+- Added adaptive (100vw) search-bar formatting for landscape mobile viewports
+- Changed background image orientation to be device-orientation-dependent instead of width-dependent

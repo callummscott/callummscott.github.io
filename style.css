@@ -124,14 +124,13 @@ body {
     transition: font-size .5s;
 }
 
-.searchbar {
+.search-input {
     display: inline-flex;
     justify-content: center;
     z-index: 0;
-    flex-basis: 50px;
     gap: 10px;
-} .searchbar input {
-    padding-inline: 20px;
+    padding: 0;
+} .search-input input {
     font-size: large;
     font-weight: 100;
     color: var(--secondary-text-color);
@@ -246,6 +245,7 @@ body {
 }
 
 
+
 /* 4k Monitor */
 @media only screen and (max-width: 2560px) {
 
@@ -279,9 +279,6 @@ body {
     .chopping-board {
         padding-inline: 10px;
     }
-    .bg-image {
-        background-image: url("images/kitchen-portrait-edited-lq.jpg");
-    }
 }
 
 /* Mobile XL */
@@ -302,14 +299,13 @@ body {
 /* Mobile M */
 @media only screen and (max-width: 375px) {
     .title-page-contents {
-        width: 95%;
         min-width: none;
     }
-    .searchbar {
+    .search-input {
         display: flex;
         flex-direction: column;
         align-items: center;
-    } .searchbar input[type=submit] {
+    } .search-input input[type=submit] {
         width: 50%;
     } 
     
@@ -325,13 +321,7 @@ body {
 /* Incredibly awkward title-border shrinker for annoyingly-narrow landscape phones */
 /* Landscape Mobile L */
 @media only screen and (orientation: landscape) and (max-height: 425px) {
-    #title-border-svg-wrapper {
-        /* Scales border-svg size in y direction using linear calculation between 100svh:200px=5px & 100svh:425px=86.3px */
-        /* top: calc(2px + -1*clamp(5px, calc( 81.3svh/2.25 - 81.3px*8/9 + 5px), 86.3px));
-        height: clamp(5px, calc(81.3svh/2.25 - 81.3px*8/9 + 5px), 86.3px); */
-        height: 10svh;
-        top: calc(-10svh + 2px);
-    }.title-page-container {
+    .title-page-container {
         height: 97svh;
     }
     .title-page-contents {
@@ -348,13 +338,45 @@ body {
     .heading {
         font-size: 3rem;
     }
+    #title-border-svg-wrapper {
+        /* Scales border-svg size in y direction using linear calculation between 100svh:200px=5px & 100svh:425px=86.3px */
+        /* top: calc(2px + -1*clamp(5px, calc( 81.3svh/2.25 - 81.3px*8/9 + 5px), 86.3px));
+        height: clamp(5px, calc(81.3svh/2.25 - 81.3px*8/9 + 5px), 86.3px); */
+        height: 10svh;
+        top: calc(-10svh + 2px);
+    }
 
 }
 @media only screen and (orientation: landscape) and (max-height: 320px) {
     .title-page-contents {
-        gap: 10px;
+        width: 400px;
+        gap: 5px;
     }
-    .chopping-board {
-        padding: 5px;
+    .sub-heading {
+        font-size: 1rem;
+    }
+    .heading {
+        font-size: 2rem;
+    }
+    .search-input {
+        /* Just tries to align search inputs with 400px page-contents width */
+        box-sizing: border-box;
+        padding-inline: 5px;
+        flex-basis: 5svh;
+        width: 100%;
+    } .search-input #recipe-search {
+        width: 100%;
+    }
+}
+
+/* Orientation checks */
+@media only screen and (orientation: landscape) {
+    .bg-image {
+        background-image: url("images/kitchen-landscape-edited-lq.jpg")
+    }
+}
+@media only screen and (orientation: portrait) {
+    .bg-image {
+        background-image: url("images/kitchen-portrait-edited-lq.jpg")
     }
 }
