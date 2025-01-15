@@ -1,0 +1,72 @@
+:root {
+    --text-color-primary:   rgb(255, 235, 200);
+    --text-color-secondary: rgb(255, 245, 225);
+    --text-color-contrast:  rgb(206, 139, 38); /*rgb(224, 127, 0);*/
+    --shadow-color-primary: rgba(150, 140, 120, 1);
+    --wood-brown-color: rgb(190, 125, 45);
+
+
+    --input-outline-color: rgba(190, 125, 5, 0.25);
+    --input-text-color:    white;
+
+    --input-bg-color:        rgba(0, 0, 0, .5); /*.15*/
+    --input-bg-color-active: rgba(0, 0, 0, 0.2);
+    --input-bg-color-hover:  rgba(0, 0, 0, .2);
+    --input-shadow:          rgba(0, 0, 0, .5);
+
+    --spacing-xs:   1px;
+    --spacing-sm:   2px;
+    --spacing-md:   5px;
+    --spacing-lg:  10px;
+    --spacing-xl:  20px;
+    --spacing-xxl: 30px;
+
+
+    --hero-bg-blur:  blur(.2rem);
+    --hero-flex-gap: 30px;
+
+
+    --divider-height: 8svh;
+    --divider-svg-border-radius: 1svh;
+
+
+    --worktop-shadow-height: calc( .75*var(--divider-height) );
+
+    --chest-width: 96vw;
+
+    --drawer-handle-color: var(--wood-brown-color);
+    --drawer-handle-shading: rgb(247, 172, 60);
+
+    --drawer-handle-size: 100px;
+
+    --drawer-preferred-width: 300px;
+    --drawer-face-color-in: rgba(0,0,0,0);
+    --drawer-face-color-out: rgba(0,0,0,0);
+    --drawer-inset-color-in: rgba(0,0,0,0);
+    --drawer-inset-color-out: rgba(0,0,0,0);
+    --drawer-border-left-color: rgba(0,0,0,0);
+    --drawer-border-bottom-color: rgba(0,0,0,0);
+
+
+
+
+
+    /** Widths */
+
+    /** 20% of devices at 360x640 dp */
+    --vp-width-xxs: 360px;
+    --vp-width-xs:  414px;  /* Most mobile devices between this and max-xxs */
+    --vp-width-sm:  600px;  /* Most larger dp (older) mobile devices & small tablets*/
+    --vp-width-md:  800px;  /* iPads and eh */ 
+    --vp-width-lg: 1024px; /* All tablets between this and sm */
+    /** 11% of devices at 1366x768 dp */
+    --vp-width-xl: 1440px; /* Most laptops */
+    /** 9% of devices at 1920x1080 dp */
+    --vp-width-xxl: 1920px; /* To help demarcate ultrawides */
+
+    /** Heights */
+    --vp-height-xxs: var(--vp-width-xxs);
+    --vp-height-xs:  var(--vp-width-xxs);
+    --vp-height-sm:  var(--vp-width-sm);
+
+}

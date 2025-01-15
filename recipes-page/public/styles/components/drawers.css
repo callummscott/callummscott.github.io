@@ -1,0 +1,140 @@
+.recipe-chest {
+    position: relative;
+    width:  var(--chest-width);
+    flex-shrink: 0;
+
+    background-color: var(--text-color-primary);
+
+    z-index: 0;
+}
+
+#worktop-shadow {
+    position: absolute;
+    height: var(--worktop-shadow-height);
+    filter: drop-shadow(0 5svh 4px rgb(0 0 0 / 0.6));
+    width: calc(.2svw + var(--chest-width));
+
+    transform:translateY(calc(-1*var(--worktop-shadow-height)));
+}
+
+.drawers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: min(5vw, 40px);
+    gap: min(5svw, 40px);
+    
+    width: 100%;
+    /* height: min-content; */
+    padding-inline: 5vw;
+    padding-inline: 5svw;
+    padding-block:  6vh;
+    padding-block:  6svh;
+}
+
+.recipe-link {
+    transition: translate .3s, box-shadow .3s;
+    flex: 1 1 var(--drawer-preferred-width); /** Here is where the '# Drawers / row' is calculated, .e.g 100%/250px */
+
+    &:hover > .recipe-drawer {
+        box-shadow: none;
+        position: relative;
+        translate: 0 5px;
+        box-shadow: 0 10px 15px var(--shadow-color-primary);
+    }
+    &:hover > .recipe-title {
+        text-shadow: 0px 0px 1px black;
+    }
+}
+
+@keyframes recipe-card-hover {
+    0% {
+        translate: 0 0px;
+    }
+    50% {
+        translate: 0 -7.5px;
+    }
+    100% {
+        translate: 0 -15px;
+    }
+}
+
+.recipe-drawer {
+    display:            flex;
+    flex-direction:     column;
+    justify-items:      center;
+
+    background-color:   var(--text-color-secondary);
+    border: 10px solid;
+    border-color:
+        hsla(38.8, 78%, 98%, 1)
+        hsla(38.8, 78%, 80%, 1)
+        hsla(38.8, 50%, 60%, 1)
+        hsla(38.8, 78%, 80%,1);
+    border-radius:      1.25rem;
+    
+    /* Fill the 'link' that's servings as a container */
+    width:      100%;
+    height:     100%;   
+    padding:    15px;
+    
+    transition: translate .5s; /* transition needs to be repeated for the :hover */
+}
+
+.row-1 {
+    border-radius: 10px;  
+    display: flex;
+    align-items: center; /* Keeps text centred in their labels */
+    justify-content: center; /* Keeps 'label' centred */
+    flex: 1 /* Makes all *inline* row-1s the same height -- wrapped cards can have different row-1s */  
+          1 /*? I don't think this does anything, since they can't really shrink vertically */
+          auto;
+
+    & > .recipe-title {
+        border-radius: 10px;
+        padding: 10px;
+        color: black;
+        font-size: 2rem;
+        text-align: center; /* Necessary for wrapped text to be centred */
+        text-decoration: underline; /*? If line-clipping is still an issue then get rid of this */
+    }
+}
+.row-2 {
+    display: flex;
+    justify-content: center;
+
+    border-radius: 10px;
+    border: 10px solid;
+    border-color:
+        hsl(40, 100%, 81%)
+        hsl(40, 100%, 90%)
+        hsl(40, 100%, 98%)
+        hsl(40, 100%, 90%);
+    /* ref: background-color: hsl(40, 100%, 94.1%); */
+
+    height:       50px; /* Fixes size of the drawer handle */
+    margin-block: 10px; /* Adds some buffer-space before and after */
+
+    & > .drawer-handle {
+        filter: drop-shadow(0 1.8svh 1svh rgb(0 0 0 / 0.6));
+        cursor: grab;
+    }
+}
+.row-3 {
+    display: flex;
+    border-radius: 10px;
+    padding: 10px;
+    height: clamp(200px, 20vh, 400px); /* This works alright for some reason; pretty abitrary though */
+
+    & > .recipe-image {
+        object-fit: contain; /*? Hard to see what exactly this is doing atm */
+        border-radius: 0px; /*TODO Find a suitable value for this later */
+        width: 100%; /* Prevents overflow from container */
+        height: 100%; /** Not really doing a whole lot at the moment because the container height grows */
+    }
+}
+
+
+
+
+

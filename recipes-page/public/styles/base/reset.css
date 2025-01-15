@@ -1,0 +1,21 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+body * {
+    /* Box-sizing is by default content-box, which causes confusing as fuck overflows */
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+input {
+    border: none;
+}
+
+a:link {
+    text-decoration: none;
+}

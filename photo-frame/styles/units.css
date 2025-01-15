@@ -1,0 +1,14 @@
+:root {
+    /* Length derivations for 'apertures' */
+    --unit-width: min(10vw, 200px); /* was 8vw -> this defines the size of the whole thing */
+    --unit-height: calc(1.41421 * var(--unit-width));
+    --unit-diff: calc(var(--unit-height) - var(--unit-gap) - var(--unit-width));
+    --unit-gap: calc(var(--unit-width) / 6);
+    --shadow-length: calc(var(--unit-width)/30);
+
+    /* Frame variables */
+    --inner-width: calc(var(--unit-gap) * 1);
+    --outer-width: calc(var(--unit-gap) * .85);
+    --inner-color: rgb(30,30,30);
+    --outer-color: rgb(10,10,10);
+}

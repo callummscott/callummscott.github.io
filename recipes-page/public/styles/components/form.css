@@ -1,0 +1,51 @@
+
+.form-search {
+    display:         inline-flex;
+    justify-content: center;
+    flex-wrap:       wrap;
+    gap:             var(--spacing-md);
+
+    width:     100%;
+    
+    z-index: 2;
+    
+} .form-search input {
+    color: var(--input-text-color);
+    font-size: 1.5rem;
+
+    border-radius:  var(--spacing-md);
+    
+    padding-inline: var(--spacing-lg);
+    padding-block:  var(--spacing-xs);
+
+    outline: 1px solid var(--input-outline-color);
+}
+
+/* Text input */
+.form-search-text {
+    width:            100%;
+    max-width: 20rem; /*! something of a magic number */
+
+    background-color: var(--input-bg-color);
+} .form-search-text:hover {
+    background-color: var(--input-bg-color-hover);
+    box-shadow:       0 2px 5px inset var(--input-shadow);
+
+    transition:       background-color .2s, box-shadow .2s;
+} .form-search-text:active {
+    background-color: var(--input-bg-color-active);
+}
+
+/* Submit input */
+.form-submit {
+    width:            fit-content;
+    color:            var(--text-color-primary);
+
+    background-color: var(--input-bg-color);
+    border:           none;
+} .form-submit:hover {
+    background-color: var(--input-color-hover);
+    box-shadow:       0 2px 5px inset rgba(0, 0, 0, 1);
+
+    transition: background-color .2s, box-shadow .2s;
+}

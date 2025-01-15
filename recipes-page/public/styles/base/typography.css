@@ -1,0 +1,59 @@
+
+
+h1,h2,h3 {
+    margin-block: 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+.ftg {
+    font-family: "Fredericka the Great", sans;
+    font-weight: 400;
+    font-style: normal;
+
+    color: var(--text-color-primary);
+
+    &, h1, h2 {
+        font-weight: 200;
+    }
+}
+
+.ftg-b {
+    font-family: "Fredericka the Great", sans;
+    font-weight: 700;
+    font-style: normal;
+
+    color: var(--text-color-primary)
+}
+
+.caveat-t {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+
+    color: var(--text-color-contrast);
+}
+
+.caveat {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-color-contrast);
+}
+
+.caveat-b {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
+    color: var(--text-color-contrast);
+}
+

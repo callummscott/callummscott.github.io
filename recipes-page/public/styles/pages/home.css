@@ -1,0 +1,141 @@
+
+body {
+    overflow-x:scroll; /* Lost track on what this could be doing? */
+    font-family: sans-serif;
+    font-weight: 300;
+    background-color: black; /* Gives sleek looking blurred edges -- thanks to the blurred image */
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.hero-bg-blurred {
+    height: 100vh;
+    height: 100svh;
+    background-image: url("../../images/decoration/kitchen-landscape-edited-lq.jpg");
+}
+
+.hero-backboard {
+    background-image: url("../../images/decoration/chopping-board.jpg");
+}
+
+
+
+/* @media only screen and (min-width: var(--vp-width-xxl)) {
+
+} */
+
+@media only screen and (max-width: var(--vp-width-xl)) {
+    .sub-heading {
+        font-size: 2rem;
+    }
+    .heading {
+        text-wrap: wrap;
+        font-size: 3rem;
+    }
+}
+
+
+@media only screen and (max-width: var(--vp-width-lg)) {
+
+    /*TODO Scrutinise this for a second */
+    .hero-inner {
+        width: min(100vw, 600px);
+    }
+    
+}
+
+
+@media only screen and (max-width: var(--vp-width-md)) {
+
+    /*TODO Check all these */
+    .hero-inner {
+        min-width: calc(.8*425px);
+    }
+    .hero-backboard {
+        padding-inline: 10px;
+    }
+}
+
+@media only screen and (max-width: var(--vp-width-sm)) {
+
+    /*TODO Check all these */
+    .hero-inner {
+        width: 100%;
+    }
+    .hero-backboard {
+        border-radius: 0;
+    }
+}
+
+/* Most mobiles */
+@media only screen and (max-width: var(--vp-width-xs)) {
+
+    /*TODO Check all these */
+    .hero-inner {
+        min-width: none;
+    }
+    .search-input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } .search-input input[type=submit] {
+        width: 50%;
+    } 
+}
+
+/* 
+@media only screen and (max-width: var(--vp-width-xxs)) {
+    
+} */
+
+
+
+/*! Below is just for landscape-views */
+/* Incredibly awkward hero-border shrinker for annoyingly-narrow landscape phones */
+/* Landscape Mobile L */
+@media only screen and (orientation: landscape) and (max-height: 425px) {
+
+    /*TODO Check all these */
+    .inner-hero {
+        height: 87svh;
+        width: 500px;
+        gap: 15px;
+    }
+    .hero-backboard {
+        padding: 10px;
+    }
+    #hero-border-svg-wrapper {
+        height: 10svh;
+        top: calc(-10svh + 2px);
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 320px) {
+
+    /*TODO Check all these */
+    .inner-hero {
+        width: 400px;
+        gap: 5px;
+    }
+    .sub-heading {
+        font-size: 1rem;
+    }
+    .heading {
+        font-size: 2rem;
+    }
+}
+
+
+/* Orientation checks */
+@media only screen and (orientation: landscape) {
+    .hero-bg-blurred {
+        background-image: url("../../images/decoration/kitchen-landscape-edited-lq.jpg")
+    }
+}
+@media only screen and (orientation: portrait) {
+    .hero-bg-blurred {
+        background-image: url("../../images/decoration/kitchen-portrait-edited-lq.jpg")
+    }
+}

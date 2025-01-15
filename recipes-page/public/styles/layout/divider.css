@@ -1,0 +1,68 @@
+
+.divider-anchor {
+    position: relative;
+    width: 100%;
+    height: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.divider-decoration {
+    /* border: 2px solid cyan; */
+    position: absolute;
+    overflow-x: hidden;
+}
+
+svg {
+
+    &.divider-decoration {
+        position: absolute;
+        width: 100%;
+        height:  var(--divider-height);
+        top:     calc(1svh + -1*var(--divider-height));
+        z-index: 1;
+    }
+}
+
+#carrot {
+    /* border: 2px solid cyan; */
+    width:    auto;
+    height:   20vh;
+    height:   20svh;
+    right:    0; /* Carrot's position is set from right margin instead of left */
+
+    /*? I need this calc formula to actually make sense */ 
+    transform:  translateX( -10vw )
+                translateY( calc(-2.4*var(--divider-height)) )
+                    rotate( 36deg );
+    filter:  drop-shadow(.59svh .80svh .3svh rgb(0 0 0 / .4));
+    z-index: 1;
+}
+
+#lettuce{
+    /* border: 2px solid magenta; */
+    width:    auto;
+    height:   15vh;
+    height:   15svh;
+    /*TODO Find a way to incorporate minimum-height into the formulas below */
+
+    transform: translateX( 5vw )
+               translateY( calc( -2.2*var(--divider-height)))
+                   rotate( -75deg );
+    filter:   drop-shadow( -1svh 0svh .3svh rgb(0 0 0 / .4) );
+    z-index:  3;
+}
+
+#tomato {
+    width: auto;
+    height: 12vh;
+    height: 12svh;
+    /*TODO Find a way to incorporate minimum-height into the formulas below */
+
+    transform: translateX( calc(5vw + 9svh) )
+               translateY( calc(-2*var(--divider-height)) )
+                   rotate( 20deg ); /** The 9svh component is serving to keep the tomato and lettuce close together */
+    
+    filter: drop-shadow(.34vh .94vh .3vh rgb(0 0 0 / .4));
+    z-index: 2;
+}

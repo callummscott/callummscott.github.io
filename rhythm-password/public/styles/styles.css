@@ -1,0 +1,100 @@
+html {
+    background-image: url('../images/night-sky.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+button {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+main {
+    display: flex;
+    height: 100%;
+    background-color: rgb(250, 250, 250);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#THE-BUTTON {
+    /* font-size: 14cqw; */
+    font-size: 14vw;
+    width: 6.6em;
+    padding: .5em;
+    
+    border: 0px solid white;
+    border-radius: .3em;
+    background-color: white;
+    box-shadow: .1em -.1em .2em rgb(117, 117, 117) inset;
+
+    &:hover {
+        background-color: rgb(250,250,250);
+    }
+
+    &.pressed {
+        border: .01px solid lightgrey;
+        background-color: rgb(245, 245, 245);
+        box-shadow: rgb(117, 117, 117) -10px 10px 7px inset; 
+
+        & > #button-text {
+            font-size: 13cqw;
+            -webkit-text-fill-color: unset;
+        }
+
+        &:hover {
+            background-color: rgb(245,245,245);
+        }
+    }
+
+}
+
+#button-text {
+    background: -webkit-linear-gradient(#777777, #000000);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+#clue {
+    font-size: 2rem;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    background-color: transparent;
+    border: none;
+    padding: 1rem;
+
+    width: max(5vw, min-content);
+    min-width: 4rem;
+
+    &:hover {
+        color: grey;
+    }
+}
+
+
+.credits {
+    color:white;
+    font-size:5rem;
+    font-family:"arial";
+    margin-block: 1rem;
+    text-align: center;
+}

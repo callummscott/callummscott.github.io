@@ -1,0 +1,16 @@
+
+/* Definitely warrants another name but looking at it now I can't even tell what it's doing */
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+/* Prevents small viewport content from touching sides unwantedly */
+.main {
+    /* margin-inline: 5px;  <- can't do it this way because the backgrounds get 'marginned' as well*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
