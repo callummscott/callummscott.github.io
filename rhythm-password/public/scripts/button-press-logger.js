@@ -1,12 +1,12 @@
 
-export var mouseDownLog = [];
+export var pressLog = [];
 
-export function logMouseDown(ideal, errorMargin) {
+export function logPress(ideal, errorMargin) {
     "Requires an 'ideal' log and error margins because log is 'trimmed' of old entries"
     let time = +new Date();   // of form '1728206207943' (in ms)
 
-    mouseDownLog.push(time);
-    logTrimmer(mouseDownLog, ideal, errorMargin);
+    pressLog.push(time);
+    logTrimmer(pressLog, ideal, errorMargin);
 };
 
 
@@ -15,7 +15,7 @@ function logTrimmer(log, ideal, errorMargin) {
     
     const validRange = range(ideal) + 2*errorMargin;
     let timesOutsideValidRange = (array) => {
-        //*  Must convert `mouseDownLog` from (ms) to (s) to compare with units of `ideal`
+        //*  Must convert `pressLog` from (ms) to (s) to compare with units of `ideal`
         return range(array)/1000 > validRange;
     };
     

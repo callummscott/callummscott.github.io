@@ -1,9 +1,10 @@
-import { mouseDownLog, logMouseDown } from "./mouseDownLogger.js";
-import { passwordIsValid } from "./passwordIsValid.js";
-import { rollCredits } from "./rollCredits.js";
+import { pressLog, logPress } from "./button-press-logger.js";
+import { passwordIsValid } from "./password-validator.js";
+import { rollCredits } from "./roll-credits.js";
 
 const button = $("#THE-BUTTON");
 const clue = $("#clue");
+
 
 const errorMargin = 0.05 /* i.e. you have 100ms of wiggle-room around each of the beats */
 const idealInput = [
@@ -23,18 +24,18 @@ var clickCounter = 0;
 var gameEnd = false
 
 button.on({
-    mousedown: () => {
+    mousedown:  () => {
         button.addClass("pressed");
-        logMouseDown(idealInput, errorMargin);
-        if (passwordIsValid( mouseDownLog, idealInput, errorMargin)) {
-            gameEnd=true;
-            rollCredits(start);
-            clue.hide();
+        logPress(idealInput, errorMargin);
+        if (passwordIsValid( pressLog, idealInput, errorMargin)) {
+            gameEnd=true; rollCredits(start);
         };
         clickCounter += 1;
         if (clickCounter >= 16 && (!gameEnd)) { $("#clue").show() };
     },
-    mouseup: () => {button.removeClass("pressed")}
+    mouseup:    () => {button.removeClass("pressed");},
+    touchstart: () => {button.addClass("pressed");},
+    touchend:   () => {button.removeClass("pressed");}
 });
 
 clue.on("click", () => {
@@ -51,3 +52,17 @@ $(document).on("keypress", (e) => {
     };
 });
 
+
+
+
+
+// function hasTouchSupport() {
+//     return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+// };
+  
+// if (hasTouchSupport()) {
+//     console.log("Touch-screen device detected");
+
+// } else {
+//     console.log("Non touch-screen device detected");
+// };

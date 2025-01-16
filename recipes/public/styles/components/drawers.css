@@ -3,6 +3,8 @@
     width:  var(--chest-width);
     flex-shrink: 0;
 
+    border-radius: 0 0 1.25rem 1.25rem;
+
     background-color: var(--text-color-primary);
 
     z-index: 0;
@@ -25,11 +27,8 @@
     gap: min(5svw, 40px);
     
     width: 100%;
-    /* height: min-content; */
-    padding-inline: 5vw;
-    padding-inline: 5svw;
-    padding-block:  6vh;
-    padding-block:  6svh;
+    padding-inline: min(5vw, 80px);
+    padding-block:  6vh min(5svw, 40px);
 }
 
 .recipe-link {

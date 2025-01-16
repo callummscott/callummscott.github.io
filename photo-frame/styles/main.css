@@ -2,9 +2,9 @@
 @import "/photo-frame/styles/units.css";
 
 
-
 .container {
     height: 100vh;
+    height: 100svh;
 
     display: flex;
     flex-direction: column;
@@ -62,8 +62,9 @@
 
 img[popover] {
     cursor: pointer;
-    height: 80vh;
     outline: none;
+    height: 80vh;
+    height: 80svh;
     border: 0;
     padding: 0;
 }
