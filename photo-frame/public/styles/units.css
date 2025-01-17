@@ -9,6 +9,8 @@
     /* Frame variables */
     --inner-width: calc(var(--unit-gap) * 1);
     --outer-width: calc(var(--unit-gap) * .85);
-    --inner-color: rgb(30,30,30);
-    --outer-color: rgb(10,10,10);
+    --inner-color: rgb(40, 40, 40);
+    /* --inner-color: rgb(30,30,30);
+    --outer-color: rgb(10,10,10); */
+    --outer-color: rgb(5,5,5);
 }

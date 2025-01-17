@@ -1,0 +1,138 @@
+@import "/photo-frame/public/styles/reset.css";
+@import "/photo-frame/public/styles/units.css";
+
+
+main {
+    height: 100vh;
+    height: 100svh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+#outer-frame {
+    background-color: var(--outer-color);
+    padding: var(--outer-width);
+    box-shadow:
+        var(--shadow-length)
+        var(--shadow-length)
+        10px darkgrey;
+}
+
+#inner-frame {
+    background-color: var(--inner-color);
+    padding: var(--inner-width);
+}
+
+#frame-grid {
+    display: grid;
+    background-color: var(--inner-color);
+
+    grid-template-areas:
+     "A B C  C D E  E F"
+     "G B .  I D K  . F"
+     "G H H  I J K  L L";
+
+    grid-template-columns:
+        repeat(2, var(--unit-width))
+        var(--unit-diff)
+        repeat(3, var(--unit-width))
+        var(--unit-diff)
+        var(--unit-width);
+
+    grid-template-rows:
+        var(--unit-width)
+        var(--unit-diff)
+        var(--unit-width);
+
+    gap: var(--unit-gap);
+}
+
+.item {
+    background-color: #a08148;
+    box-shadow:
+        var(--shadow-length)
+        var(--shadow-length)
+        10px #554526 inset;
+
+    & > img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+    height: 100svh; 
+    width: 100vw;
+    width: 100svw;
+    
+    padding: 5vw;
+
+    backdrop-filter: blur(calc(var(--unit-gap)/10));
+    background-color: rgba(0,0,0,.05);
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    & > img {
+        cursor: pointer;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+#ap-1 { grid-area: A; }
+#ap-2 { grid-area: B; & > img {object-fit: cover;} }
+#ap-3 { grid-area: C; }
+#ap-4 { grid-area: D; & > img {object-fit: cover;} }
+#ap-5 { grid-area: E; }
+#ap-6 { grid-area: F; }
+#ap-7 { grid-area: G; }
+#ap-8 { grid-area: H; }
+#ap-9 { grid-area: I; }
+#ap-10 { grid-area: J; }
+#ap-11 { grid-area: K; & > img {object-fit: cover; overflow-clip-margin: unset;} }
+#ap-12 { grid-area: L; }
+
+@media only screen and (orientation: portrait) {
+    :root {
+        --unit-height: min(20vw, 160px); /* Not just swapped but values changed from above */
+        --unit-width: calc(var(--unit-height) / 1.414);
+    }
+
+    #frame-grid {
+        flex-direction: row;
+
+        grid-template-areas: 
+            "H H A"
+            "G C C"
+            "G . I"
+            "K K I"
+            "D E E"
+            "L L F"
+            "B . F"
+            "B J J";
+
+        grid-template-columns:
+            var(--unit-width)
+            var(--unit-diff)
+            var(--unit-width);
+
+        grid-template-rows:
+            repeat(2, var(--unit-width))
+            var(--unit-diff)
+            repeat(3, var(--unit-width))
+            var(--unit-diff)
+            var(--unit-width);
+    }
+    .popover {
+        padding: 2vh;
+    }
+}
