@@ -1,0 +1,27 @@
+{
+  "name": "starry-night",
+  "version": "1.0.0",
+  "description": "Generates a sky full of stars",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callummscott/callummscott.github.io.git"
+  },
+  "keywords": [
+    "stars",
+    "night",
+    "night",
+    "sky",
+    "astronomy"
+  ],
+  "author": "Callum Scott",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/callummscott/callummscott.github.io/issues"
+  },
+  "homepage": "https://github.com/callummscott/callummscott.github.io#readme"
+}

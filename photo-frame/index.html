@@ -1,128 +1,136 @@
 <!DOCTYPE html>
-<head>
-    <title>Photo Frame</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/photo-frame/public/styles/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Callum Scott">
+        <title>Photo Frame</title>
+        <meta name="description" content="Photo frame site to show some of my personal photos">
+        <meta name="keywords" content="Photo, frame, photography, showcase, gallery">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <base href="/photo-frame/public/">
+        <link rel="icon" href="images/icon.ico">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-</head>
-<body>
-    <main>
-        <div id="outer-frame">
-            <div id="inner-frame">
-                <div id="frame-grid">
+    </head>
+    <body>
+        <main>
+            <div id="outer-frame">
+                <div id="inner-frame">
+                    <div id="frame-grid">
 
-                    <button id="ap-1" class="item square">
-                        <img src="public/images/wat-arun-temple.jpg"
-                            alt="A large white pyramidal Buddhist temple, Wat Arun, in Bangkok."
-                            title="Wat Arun temple in Bangkok.">
-                    </button>
-                    <div class="popover">
-                        <img src="public/images/wat-arun-temple.jpg" alt="">
+                        <button id="ap-1" class="item square">
+                            <img src="images/wat-arun-temple.jpg"
+                                alt="A large white pyramidal Buddhist temple, Wat Arun, in Bangkok."
+                                title="Wat Arun temple in Bangkok.">
+                        </button>
+                        <div class="popover">
+                            <img src="images/wat-arun-temple.jpg" alt="">
+                        </div>
+
+                        <button id="ap-2" class="item portrait">
+                            <img src="images/me.jpg"
+                                alt="A strapping young chap taking a selfie in a bright blue T shirt."
+                                title="Yes, that's me.">
+                        </button>
+                        <div class="popover">
+                            <img id="pop-2" src="images/me.jpg">
+                        </div>
+
+                        <button id="ap-3" class="item landscape">
+                            <img src="images/brummie-clouds.jpg"
+                                alt="Distant fully large white clouds looming over Birmingham University."
+                                title="I thought this one was pretty.">
+                        </button>
+                        <div class="popover">
+                            <img id="pop-3" src="images/brummie-clouds.jpg" alt="">
+                        </div>
+
+                        <button id="ap-4" class="item portrait">
+                            <img src="images/peak-district-friend.jpg"
+                                alt="Another strapping young chap leaning on a trig point in the Peak District."
+                                title="My friend Luke at a trig point in the Peak District.">
+                        </button>
+                        <div class="popover">
+                            <img id="pop-4" src="images/peak-district-friend.jpg" alt="">
+                        </div>
+
+                        <button id="ap-5" class="item landscape">
+                            <img src="images/dragons-crest.jpg"
+                                alt="Another photo of myself sat with my legs teetering over the edge of a cliff, backed by a landscape of asian karst hills."
+                                title="Me, at Dragon's Crest in Krabi, Thailand.">
+                        </button>
+                        <div class="popover">
+                            <img id="pop-5" src="images/dragons-crest.jpg" alt="">
+                        </div>
+
+                        <button id="ap-6" class="item portrait">
+                            <img src="images/lancaster-oak.jpg"
+                                alt="A Summery scene of friends on a green field with a huge green oak."
+                                title="Some Lancaster flat-mates having a summer get together.">
+                        </button>
+                        <div class="popover">
+                            <img id="pop-6" src="images/lancaster-oak.jpg" alt="">
+                        </div>
+
+                        <button id="ap-7" class="item portrait">
+                            <img src="images/manchester-rain.jpg"
+                                alt="A misty, rainy shot of the street in front of the Manchester art museum as a bright yellow Mancunian metro rolls by it."
+                                title="A typical gloomy day in my hometown of Manchester.">
+                        </button>
+                        <div class="popover">
+                            <img id="pop-7" src="images/manchester-rain.jpg" alt="">
+                        </div>
+
+                        <button id="ap-8" class="item landscape">
+                            <img src="images/rachel.jpg"
+                                alt="A smily girl sits facing the camera with a blueish-grey coast of rocks behind her"
+                                title="My partner in crime.">
+                        </button>
+                        <div class="popover">
+                            <img id="pop-8" src="images/rachel.jpg" alt="">
+                        </div>
+
+                        <button id="ap-9" class="item portrait">
+                            <img src="images/climbing-insect.jpg"
+                                alt="A closeup of a small orange insect on a large-looking blade of grass."
+                                title="The saturation on these things wasn't intentional btw.">
+                        </button>
+                        <div class="popover">
+                            <img id="pop-9" src="images/climbing-insect.jpg" alt="">
+                        </div>
+
+                        <button id="ap-10" class="item square">
+                            <img src="images/coots.jpg"
+                                alt="European coots paddling across a lillypad-covered a lake."
+                                title="Our not so friendly neighbourhood coots by the Lancaster sports building.">
+                        </button>
+                        <div class="popover">
+                            <img id="pop-10" src="images/coots.jpg" alt="">
+                        </div>
+
+                        <button id="ap-11" class="item portrait">
+                            <img src="images/cirrus-clouds.jpg"
+                                alt="A beautiful sky at Lancaster University."
+                                title="I liked the structure of this photo a lot.">
+                        </button>
+                        <div class="popover">
+                            <img id="pop-11" src="images/cirrus-clouds.jpg" alt="">
+                        </div>
+
+                        <button id="ap-12" class="item landscape">
+                            <img src="images/sapa-valley.jpg"
+                                alt="Northern Vietnam's valleys of clouds in Sapa."
+                                title="The clouds here were beautiful.">
+                        </button>
+                        <div class="popover">
+                            <img id="pop-12" src="images/sapa-valley.jpg" alt="">
+                        </div>
+
                     </div>
-
-                    <button id="ap-2" class="item portrait">
-                        <img src="public/images/me.jpg"
-                            alt="A strapping young chap taking a selfie in a bright blue T shirt."
-                            title="Yes, that's me.">
-                    </button>
-                    <div class="popover">
-                        <img id="pop-2" src="public/images/me.jpg">
-                    </div>
-
-                    <button id="ap-3" class="item landscape">
-                        <img src="public/images/brummie-clouds.jpg"
-                            alt="Distant fully large white clouds looming over Birmingham University."
-                            title="I thought this one was pretty.">
-                    </button>
-                    <div class="popover">
-                        <img id="pop-3" src="public/images/brummie-clouds.jpg" alt="">
-                    </div>
-
-                    <button id="ap-4" class="item portrait">
-                        <img src="public/images/peak-district-friend.jpg"
-                            alt="Another strapping young chap leaning on a trig point in the Peak District."
-                            title="My friend Luke at a trig point in the Peak District.">
-                    </button>
-                    <div class="popover">
-                        <img id="pop-4" src="public/images/peak-district-friend.jpg" alt="">
-                    </div>
-
-                    <button id="ap-5" class="item landscape">
-                        <img src="public/images/dragons-crest.jpg"
-                            alt="Another photo of myself sat with my legs teetering over the edge of a cliff, backed by a landscape of asian karst hills."
-                            title="Me, at Dragon's Crest in Krabi, Thailand.">
-                    </button>
-                    <div class="popover">
-                        <img id="pop-5" src="public/images/dragons-crest.jpg" alt="">
-                    </div>
-
-                    <button id="ap-6" class="item portrait">
-                        <img src="public/images/lancaster-oak.jpg"
-                            alt="A Summery scene of friends on a green field with a huge green oak."
-                            title="Some Lancaster flat-mates having a summer get together.">
-                    </button>
-                    <div class="popover">
-                        <img id="pop-6" src="public/images/lancaster-oak.jpg" alt="">
-                    </div>
-
-                    <button id="ap-7" class="item portrait">
-                        <img src="public/images/manchester-rain.jpg"
-                            alt="A misty, rainy shot of the street in front of the Manchester art museum as a bright yellow Mancunian metro rolls by it."
-                            title="A typical gloomy day in my hometown of Manchester.">
-                    </button>
-                    <div class="popover">
-                        <img id="pop-7" src="public/images/manchester-rain.jpg" alt="">
-                    </div>
-
-                    <button id="ap-8" class="item landscape">
-                        <img src="public/images/rachel.jpg"
-                            alt="A smily girl sits facing the camera with a blueish-grey coast of rocks behind her"
-                            title="My partner in crime.">
-                    </button>
-                    <div class="popover">
-                        <img id="pop-8" src="public/images/rachel.jpg" alt="">
-                    </div>
-
-                    <button id="ap-9" class="item portrait">
-                        <img src="public/images/climbing-insect.jpg"
-                            alt="A closeup of a small orange insect on a large-looking blade of grass."
-                            title="The saturation on these things wasn't intentional btw.">
-                    </button>
-                    <div class="popover">
-                        <img id="pop-9" src="public/images/climbing-insect.jpg" alt="">
-                    </div>
-
-                    <button id="ap-10" class="item square">
-                        <img src="public/images/coots.jpg"
-                            alt="European coots paddling across a lillypad-covered a lake."
-                            title="Our not so friendly neighbourhood coots by the Lancaster sports building.">
-                    </button>
-                    <div class="popover">
-                        <img id="pop-10" src="public/images/coots.jpg" alt="">
-                    </div>
-
-                    <button id="ap-11" class="item portrait">
-                        <img src="public/images/cirrus-clouds.jpg"
-                            alt="A beautiful sky at Lancaster University."
-                            title="I liked the structure of this photo a lot.">
-                    </button>
-                    <div class="popover">
-                        <img id="pop-11" src="public/images/cirrus-clouds.jpg" alt="">
-                    </div>
-
-                    <button id="ap-12" class="item landscape">
-                        <img src="public/images/sapa-valley.jpg"
-                            alt="Northern Vietnam's valleys of clouds in Sapa."
-                            title="The clouds here were beautiful.">
-                    </button>
-                    <div class="popover">
-                        <img id="pop-12" src="public/images/sapa-valley.jpg" alt="">
-                    </div>
-
                 </div>
             </div>
-        </div>
-    </main>
-    <script src="/photo-frame/public/scripts/script.js"></script>
-</body>
+        </main>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>

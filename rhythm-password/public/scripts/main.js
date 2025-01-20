@@ -5,7 +5,6 @@ import { rollCredits } from "./roll-credits.js";
 const button = $("#THE-BUTTON");
 const clue = $("#clue");
 
-
 const errorMargin = 0.05 /* i.e. you have 100ms of wiggle-room around each of the beats */
 const idealInput = [
     0,
@@ -19,6 +18,7 @@ const idealInput = [
     3.7037037037037037,
     4.444444444444445
 ];
+
 const start = new Date();
 var clickCounter = 0;
 var gameEnd = false

@@ -1,7 +1,6 @@
 
 const imageBtns = document.querySelectorAll(".item");
 for (const button of imageBtns) {
-    console.dir(button);
     button.addEventListener("click", function() {
         const popover = button.nextElementSibling;
         popover.style.display = "flex";

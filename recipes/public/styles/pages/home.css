@@ -13,11 +13,11 @@ body {
 .hero-bg-blurred {
     height: 100vh;
     height: 100svh;
-    background-image: url("../../images/decoration/kitchen-landscape-edited-lq.jpg");
+    background-image: url("/recipes/public/images/decoration/kitchen-landscape-edited-lq.jpg");
 }
 
 .hero-backboard {
-    background-image: url("../../images/decoration/chopping-board.jpg");
+    background-image: url("/recipes/public/images/decoration/chopping-board.jpg");
 }
 
 
@@ -131,11 +131,11 @@ body {
 /* Orientation checks */
 @media only screen and (orientation: landscape) {
     .hero-bg-blurred {
-        background-image: url("../../images/decoration/kitchen-landscape-edited-lq.jpg")
+        background-image: url("/recipes/public/images/decoration/kitchen-landscape-edited-lq.jpg")
     }
 }
 @media only screen and (orientation: portrait) {
     .hero-bg-blurred {
-        background-image: url("../../images/decoration/kitchen-portrait-edited-lq.jpg")
+        background-image: url("/recipes/public/images/decoration/kitchen-portrait-edited-lq.jpg")
     }
 }

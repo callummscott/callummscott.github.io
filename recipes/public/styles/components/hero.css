@@ -63,7 +63,7 @@
     width:           50vw;
     min-width: min-content;
     
-    background-image:        url("../../images/error.jpg");
+    background-image:        url("/recipes/public/images/decoration/error.jpg");
     /* background-repeat:       no-repeat; */
     background-position:     center; /* prevents it sliding when screen narrowed */
     
