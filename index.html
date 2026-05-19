@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="icon" href="./public/images/GitHub_Invertocat_White.svg">
+  <title>Portfolio — Callum Scott</title>
+  <link rel="stylesheet" href="./public/styles/styles.css"> 
+  <script defer src="./public/js/script.js"></script>
+</head>
+<body>
+  <header>
+    <div id="banner">
+       <div id="header-container">
+         <h1 id="site-title">Callum Scott</h1>
+         <span id="banner-tagline"></span>
+       </div>
+      <nav>
+        <ul>
+          <li><a class="page-link" href="">Portfolio</a></li>
+          <li><a class="page-link" href="./about-me.html">About&nbsp;Me</a></li>
+          <li>
+            <a class="page-link" href="" download="tracker">
+              Résumé  
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black ">
+                <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <h2 class="page-title">Personal Projects</h2>
+
+      <a class="project" href="https://github.com/callummscott/gravity_simulation/" rel="external">
+        <h3>3D Gravity Simulation</h3>
+        <img class="github" src="./public/images/GitHub_Invertocat_White.svg" alt="">
+        <ul class="skill-tags">
+          <li>python</li>
+          <li>numpy</li>
+          <li>pytest</li>
+          <li>matplotlib</li>
+        </ul>
+        <img class="screenshot" src="./public/images/gravity_simulation.png" alt="">
+        <p>
+          A 3D gravitational N-body simulator built in Python.
+          Implements Verlet integration for stable orbits, plus collision handling and
+          configuration options. Visualised in 3D with matplotlib, and covered by a pytest test suite.
+        </p>
+      </a>
+
+      <a class="project" href="https://github.com/callummscott/todo-list/" rel="external">
+        <h3>To-do List</h3>
+        <img class="github" src="./public/images/GitHub_Invertocat_White.svg" alt="">
+        <ul class="skill-tags">
+          <li>postgresql</li>
+          <li>express</li>
+          <li>ejs</li>
+          <li>node.js</li>
+          <li>html</li>
+          <li>css</li>
+          <li>javascript</li>
+        </ul>
+        <img class="screenshot" src="./public/images/todo_list.png" alt="">
+        <p>
+          A full-stack to-do list app with persistent storage.
+          Create, edit, and delete tasks through an Express API, with data stored
+          in a PostgreSQL database and pages rendered server-side using EJS templates.
+        </p>
+        </div>
+      </a>
+      
+      <a class="project" href="https://github.com/callummscott/travel-tracker/" rel="external">
+        <h3>Travel Tracker</h3>
+        <img class="github" src="./public/images/GitHub_Invertocat_White.svg" alt="">
+        <ul class="skill-tags">
+          <li>css</li>
+          <li>html</li>
+          <li>node.js</li>
+          <li>postgresql</li>
+          <li>express</li>
+          <li>ejs</li>
+        </ul>
+        <img class="screenshot" src="./public/images/travel_tracker_2.png" alt="">
+        <p>
+          An interactive world map to track the countries you've visited.
+          Built with Node.js and Express, it stores visit data in PostgreSQL and colours
+          visited countries with custom colours on an SVG map rendered via EJS.
+        </p>
+      </a>
+    </article>
+  </main>
+  
+  <footer>
+    <a class="contact-link" href="mailto:callummscott@yahoo.co.uk">Email</a>
+    |
+    <a class="contact-link" href="https://github.com/callummscott">Github</a>
+    |
+    <a class="contact-link" href="./index.html">LinkedIn</a>
+  </footer>
+</body>
+</html>
