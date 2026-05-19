@@ -179,6 +179,18 @@ h2.page-title {
   }
 }
 
+article p {
+  margin-bottom: 1.5rem;
+  padding-inline: 1rem;
+  
+  @media screen and (min-width: 600px) {
+    margin-bottom: 2rem;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 2.5rem;
+  }
+}
+
 /* --------------------projects-------------------- */
 
 .project {
