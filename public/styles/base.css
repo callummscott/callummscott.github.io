@@ -109,15 +109,6 @@ nav ul {
   }
 }
 
-a {
-  color: var(--stndrd-txt-dark);
-  transition: color .2s, text-shadow .2s;
-}
-a:hover {
-  color: white;
-  text-shadow: 0 0  .5em white;
-}
-
 .page-link {
   font-size: 1.2rem;
   display: flex;

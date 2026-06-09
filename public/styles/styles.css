@@ -210,6 +210,16 @@ section p > a {
   }
 }
 
+a.page-link, footer a {
+  color: var(--stndrd-txt-dark);
+  transition: color .2s, text-shadow .2s;
+
+  &:hover {
+    color: white;
+    text-shadow: 0 0  .5em white;
+  }
+}
+
 .collapsible {
   cursor: pointer;
   margin-block: .2rem;
